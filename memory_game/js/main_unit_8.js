@@ -3,20 +3,20 @@ var cardsInPlay = [];
 
 var cardOne = cards[0];
 cardsInPlay.push(cardOne);
-
-var cardTwo = cards[1];
-cardsInPlay.push(cardTwo);
-
 console.log('User flipped ' + cardOne);
+
+var cardTwo = cards[2];
+cardsInPlay.push(cardTwo);
 console.log('User flipped ' + cardTwo);
 
 if (cardsInPlay.length === 2) {
-  //console.log('You have two cards, do they match?');
-  if (cardOne === cardTwo) {
-  	alert('You found a match!');
-  } else {
-  	alert('Sorry, please try again.');
-  }
+	if (cardsInPlay[0] === cardsInPlay[1]) {
+		alert('You have a match!');
+	} else {
+		alert('Sorry, try again.');
+
+	}
+
 } else {
-	console.log('Please draw another card.');
+	alert('Please draw another card');
 }
